@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Template.master.cs" Inherits="CollegeManagementSystem.Template" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+     <link href="StyleSheet1.css" type="text/css" rel="stylesheet"/>
+
+    <title>CollegeManagementSystem</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+   
+<body>
+    <header>
+        
+<h1>College Management System</h1>
+        
+         <div id="nav">
+                <ul class="Menu">
+                   <li class="Add"><a href="/Admin/Main.aspx">Add</a></li>
+                   <li class="Record"><a href="/Admin/Record.aspx">Record</a></li>
+                  
+                  
+                </ul>
+            
+               </div>
+
+    </header>
+    
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+
+        <div class="Jump">
+        <asp:Button ID="BtnPrevious" runat="server" Text="<<" OnClick="BtnPrevious_Click" />
+        <asp:Button ID="BtnNext" runat="server" Text=">>" OnClick="BtnNext_Click" />
+            </div>
+    </form>
+    <footer>
+        <h3>Contact</h3>
+        <p>Mari company</p>
+        <p>TEL:123-456-7890      Email:maricompany@gmail.com</p>
+        <p>Address:12Greenfield Ave,Toronto K0L2P3</p>
+    </footer>
+</body>
+</html>
